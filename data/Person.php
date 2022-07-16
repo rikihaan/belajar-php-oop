@@ -16,6 +16,12 @@ class Person
         $this->addres = $address;
     }
 
+    // menambahkan destructor, destructor adalah function yang akan di jalankan ketika sebuah program atau object telah selesai di eksekusi
+    function __destruct()
+    {
+        echo $this->name."is Destroiy".PHP_EOL;
+    }
+
     // manambah kan function
     function sayHello(?string $name)
     {
