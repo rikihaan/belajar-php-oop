@@ -1,10 +1,5 @@
 <?php
 
-/**
- * kita juga bisa membaut contant dan functio di dalam namespace
- */
-
-//  namespace
 namespace Helper;
 
 // membuat function di namespace
