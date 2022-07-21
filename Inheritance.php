@@ -12,11 +12,11 @@ class Manager{
 class VicPresident extends Manager{}
 
 // membuat instance obejet dari parent class
-$eko = new Manager();
+$eko = new Manager("dadang");
 $eko->name="Eko Kurniawan Khannedy";
 $eko->sayHelo("Riki");
 
 // membuat instance obeject dari chiled class
-$rendi = new VicPresident();
+$rendi = new VicPresident("Agus");
 $rendi->name="Rendi Apriandi";
 $rendi->sayHelo("Jaka");
