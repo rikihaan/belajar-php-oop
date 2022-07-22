@@ -1,26 +1,28 @@
 <?php
 // membuat parent class
-class Programmer{
+class Programmer
+{
     public string $name;
 
     // membuat constructor
     public function __construct(string $name)
     {
-        $this->name =$name;
+        $this->name = $name;
     }
 }
 
 // class child 1
-class BackendProgrmmer extends Programmer{
-
+class BackendProgrammer extends Programmer
+{
 }
 // class child 2
-class FrondenProgramer extends Programmer{
-
+class FrondenProgramer extends Programmer
+{
 }
 
 // membuat class yang melakukan pholimorphism
-class Company{
+class Company
+{
     // membuat property dengan type Programmer
     public Programmer $programmer;
     /**
@@ -30,13 +32,13 @@ class Company{
 }
 
 // check and casts
-function helloProgrammer(Programmer $programmer){
-    var_dump($programmer);
-    if($programmer instanceof Programmer){
-        echo "Hello Programmer $programmer->name".PHP_EOL;
-    }else if($programmer instanceof BackendProgrmmer){
-        echo "Hello Backend Programmer $programmer->name".PHP_EOL;
-    }else if($programmer instanceof FrondenProgramer){
-        echo "Hello Frondend Programmer $programmer->name".PHP_EOL;
+function helloProgrammer(Programmer $programmer)
+{
+    if ($programmer instanceof FrondenProgramer) {
+        echo "Hello Frondend Programmer $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof BackendProgrammer) {
+        echo "Hello Backend Programmer $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof Programmer) {
+        echo "Hello Programmer $programmer->name" . PHP_EOL;
     }
 }
