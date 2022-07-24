@@ -44,9 +44,20 @@ trait Getname
     public string $name;
 }
 
+// Selain kongkrit functioin trrait juga bisa di tambahkan abstract method, namun class yang menggunkan nya wajib
+trait canRun{
+    abstract function run():void;
+}
+
 // menggunakan trait
 class Person
 {
     // menggunkan trait dengan kata kunci use
-    use SayGoodBye, Hello, Getname;
+    use SayGoodBye, Hello, Getname,canRun;
+
+    // mengoveride abstract function run()
+    public function run(): void
+    {
+        echo "Person $this->name is Running".PHP_EOL;
+    }
 }
