@@ -17,8 +17,16 @@ abstract class Animal
 
 class Cat extends Animal
 {
-    public function run()
+    public function run():void
     {
         echo "Cat $this->name is Run" . PHP_EOL;
+    }
+}
+
+class Dog extends Animal
+{
+    public function run():void
+    {
+        echo "Dog $this->name is Run" . PHP_EOL;
     }
 }
