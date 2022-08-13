@@ -8,7 +8,7 @@ class Programmer
     public function __construct(string $name)
     {
         $this->name = $name;
-    }
+    } 
 }
 
 // class child 1
